@@ -17,10 +17,12 @@ public class ExpensesManager {
         System.out.println("Значение сохранено! Ваш текущий баланс в рублях: " + moneyBeforeSalary);
         expenses.add(expense); // Замените на работу с таблицей
         if (expensesByCategories.containsKey(category) == true) {// Проверьте наличие категории
-            expenses = new ArrayList<>(); // Получите список трат в этой категории
+            for (Double exp : expenses) {
+                System.out.println(exp);
+            }  // Получите список трат в этой категории
             expenses.add(expense); // Добавьте трату
         } else {
-            ArrayList<Double> expenses = new ArrayList<>();;// Создайте новый список трат и добавьте в него сумму
+            ArrayList<Double> expenses = new ArrayList<>();// Создайте новый список трат и добавьте в него сумму
             expensesByCategories.put(category, expenses); // Сохраните категорию и новый список трат в хеш-таблицу
         }
         if (moneyBeforeSalary < 1000) {
