@@ -16,7 +16,7 @@ public class ExpensesManager {
         moneyBeforeSalary = moneyBeforeSalary - expense;
         System.out.println("Значение сохранено! Ваш текущий баланс в рублях: " + moneyBeforeSalary);
         expenses.add(expense); // Замените на работу с таблицей
-        if (expensesByCategories.containsKey(category) == true) {// Проверьте наличие категории
+        if (expensesByCategories.containsKey(category)) {// Проверьте наличие категории
             for (Double exp : expenses) {
                 System.out.println(exp);
             }  // Получите список трат в этой категории
@@ -48,7 +48,7 @@ public class ExpensesManager {
         /* Замените логику для работы с таблицами
         Если категория есть, то ищем максмальную трату.
         Иначе печатаем "Такой категории пока нет." */
-        if (expensesByCategories.containsKey(category) == true) {
+        if (expensesByCategories.containsKey(category)) {
             for (String cat : expensesByCategories.keySet()) {
                 for (Double exp : expensesByCategories.get(cat)) {
                     if (exp > maxExpense) {
