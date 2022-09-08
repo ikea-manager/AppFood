@@ -68,9 +68,7 @@ public class ExpensesManager {
     }
 
     void removeCategory(String name){  // Напишите метод для удаления категории
-        if (expensesByCategories.containsKey(name)){
             expensesByCategories.remove(name);
-        } else System.out.println("Такой категории нет");
     }
 
     String getMaxCategoryName() {  // Напишите метод для получения категории, где размер трат больше всего
