@@ -34,9 +34,10 @@ public class ExpensesManager {
         // Замените логику для работы с таблицами
         for (String category : expensesByCategories.keySet()) {
             System.out.println(category);
-            for (int i = 0; i < expenses.size(); i++) {
+            for(Double expense: expensesByCategories.get(category)) { System.out.println(expense); }
+            /*for (int i = 0; i < expenses.size(); i++) {
                 System.out.println("Трата № " + (i + 1) + ". Потрачено " + expenses.get(i) + " рублей");
-            }
+            }*/
         }
     }
 
